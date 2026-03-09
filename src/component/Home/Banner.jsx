@@ -1,6 +1,6 @@
 const Banner = () => {
     return (
-        <section className="min-h-[60vh] bg-base-200 flex items-center justify-center px-4">
+        <section className="min-h-[60vh] bg-base-200 flex items-center justify-center">
             <div className="text-center max-w-11/12 mx-auto">
 
                 {/* Badge */}

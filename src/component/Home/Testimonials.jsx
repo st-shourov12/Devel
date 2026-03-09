@@ -89,15 +89,15 @@ const StarRating = ({ rating }) => {
 const Testimonials = () => {
   return (
     <section className="py-16 px-4 bg-base-200">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-11/12 mx-auto">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-orange-600 font-semibold text-sm uppercase tracking-widest mb-3">
             Student Reviews
           </p>
           <h2 className="text-4xl font-bold mb-3">
-            What Our Students <span className="text-primary">Say</span>
+            What Our Students <span className="text-orange-600">Say</span>
           </h2>
           <p className="text-base-content/55 max-w-md mx-auto">
             Over 42,000 developers have leveled up with Devel.
@@ -106,7 +106,7 @@ const Testimonials = () => {
 
           {/* Overall Rating */}
           <div className="flex items-center justify-center gap-3 mt-6">
-            <span className="text-5xl font-bold text-primary">4.8</span>
+            <span className="text-5xl font-bold text-orange-600">4.8</span>
             <div className="text-left">
               <StarRating rating={5} />
               <p className="text-sm text-base-content/50 mt-1">
@@ -134,7 +134,7 @@ const Testimonials = () => {
                 </p>
 
                 {/* Course tag */}
-                <span className="badge badge-outline badge-sm text-primary border-primary/30 truncate max-w-full">
+                <span className="badge badge-outline badge-sm text-orange-600 border-primary/30 truncate max-w-full">
                   {t.course}
                 </span>
 

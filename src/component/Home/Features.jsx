@@ -38,16 +38,16 @@ const features = [
 const Features = () => {
   return (
     <section className="py-16 px-4 bg-base-100">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-11/12 mx-auto">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-orange-600 font-semibold text-sm uppercase tracking-widest mb-3">
             Why Choose Devel
           </p>
           <h2 className="text-4xl font-bold mb-3">
             Everything You Need to <br />
-            <span className="text-primary">Succeed as a Developer</span>
+            <span className="text-orange-600">Succeed as a Developer</span>
           </h2>
           <p className="text-base-content/55 max-w-md mx-auto">
             We built Devel with one goal — to give every developer the tools,
@@ -80,7 +80,7 @@ const Features = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <Link href="/course" className="btn btn-primary btn-wide">
+          <Link href="/course" className="btn border border-orange-600 hover:bg-orange-600 btn-wide">
             Start Learning Now
           </Link>
         </div>

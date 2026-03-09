@@ -158,14 +158,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 |---|---|---|
 | Landing Page | `/` | ❌ |
 | Course List | `/course` | ❌ |
-| Course Detail | `/course/[id]` | ❌ |
+| Course Detail | `/course/[id]` | ✅ |
 | Blog List | `/blog` | ❌ |
 | Blog Detail | `/blog/[id]` | ❌ |
 | About Us | `/about` | ❌ |
 | Login | `/login` | ❌ |
 | Register | `/register` | ❌ |
 | Add Course | `/add-product` | ✅ |
-| Manage Courses | `/manage-products` | ✅ |
+
 
 ---
 

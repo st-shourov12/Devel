@@ -102,12 +102,12 @@ const courses = [
 
 const LatestCourse = () => {
     return (
-        <section className="py-16 px-4 bg-base-200">
+        <section className="py-12 px-4 bg-base-200">
             <div className="max-w-11/12 mx-auto">
 
                 {/* Header */}
                 <div className="text-center mb-10">
-                    <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
+                    <p className="text-orange-600 font-semibold text-sm uppercase tracking-widest mb-2">
                         What We Offer
                     </p>
                     <h2 className="text-4xl font-bold">Latest Courses</h2>

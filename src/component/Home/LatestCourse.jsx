@@ -1,5 +1,6 @@
 // app/components/LatestCourse.jsx  ← Server Component (no "use client")
 
+import Link from "next/link";
 import CourseCard from "./CourseCard";
 
 
@@ -102,7 +103,7 @@ const courses = [
 const LatestCourse = () => {
     return (
         <section className="py-16 px-4 bg-base-200">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-11/12 mx-auto">
 
                 {/* Header */}
                 <div className="text-center mb-10">
@@ -124,9 +125,9 @@ const LatestCourse = () => {
 
                 {/* View All Button */}
                 <div className="text-center mt-10">
-                    <a href="/course" className="btn btn-outline btn-primary btn-wide">
+                    <Link href="/course" className="btn btn-outline border border-orange-600 hover:bg-orange-600 btn-wide">
                         View All Courses
-                    </a>
+                    </Link>
                 </div>
 
             </div>

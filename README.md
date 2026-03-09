@@ -6,7 +6,13 @@ A full-stack web development course selling platform built with **Next.js App Ro
 
 ## 🚀 Live Demo
 
-> Coming soon
+### [https://devel-iota.vercel.app](https://devel-iota.vercel.app)
+
+---
+
+## GitHub
+
+### [https://github.com/st-shourov12/Devel.git](https://github.com/st-shourov12/Devel.git)
 
 ---
 
@@ -91,7 +97,7 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/devel.git
+git clone https://github.com/st-shourov12/Devel.git
 cd devel
 ```
 
@@ -213,8 +219,8 @@ This project is ready to deploy on **Vercel**:
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
+- GitHub: [@st-shourov12](https://github.com/st-shourov12)
+- LinkedIn: [miraz-shourov](https://www.linkedin.com/in/miraz-shourov)
 
 ---
 

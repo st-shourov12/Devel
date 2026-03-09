@@ -1,4 +1,3 @@
-// src/components/Testimonials.jsx
 
 const testimonials = [
   {

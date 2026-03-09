@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 JavaScript Tips Every Developer Should Know",
+    "short_description": "Level up your JS skills with these practical tips used by senior developers daily.",
+    "full_description": "JavaScript is one of the most versatile languages in the world, but many developers only scratch the surface of what it can do. In this post, we'll cover 10 practical tips that senior developers use every day to write cleaner, faster, and more maintainable code.\n\n1. Use optional chaining (?.) to safely access nested object properties without throwing errors.\n\n2. Leverage nullish coalescing (??) instead of || when you want to fall back only on null or undefined — not falsy values like 0 or ''.\n\n3. Destructure arrays and objects to write cleaner, more readable assignments.\n\n4. Use Promise.all() when running multiple async operations that don't depend on each other.\n\n5. Master the Array methods: map, filter, reduce, find, and some — they cover 90% of array operations cleanly.\n\n6. Avoid mutating state directly. Always return new references when working with arrays and objects.\n\n7. Use console.table() for debugging arrays of objects — it's far more readable than console.log.\n\n8. Short-circuit evaluation with && and || is great for conditional rendering and default values.\n\n9. Always handle errors in async/await with try/catch blocks.\n\n10. Learn the event loop — understanding how JavaScript handles async code will make you a dramatically better debugger.",
+    "category": "JavaScript",
+    "author": "James Hartwell",
+    "date": "2024-04-10",
+    "read_time": "6 min read",
+    "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800",
+    "tags": ["JavaScript", "Tips", "Best Practices"]
+  },
+  {
+    "id": 2,
+    "title": "Getting Started with Next.js App Router",
+    "short_description": "A beginner-friendly walkthrough of Next.js 14 App Router, layouts, and server components.",
+    "full_description": "Next.js App Router introduced a completely new way to build React applications — one that embraces React Server Components by default and rethinks routing from the ground up.\n\nIn this guide, we'll walk through the basics of App Router and how it differs from the old Pages Router.\n\nFile-based Routing: Every folder inside /app becomes a route. A file named page.jsx inside that folder renders the UI for that route.\n\nLayouts: The layout.jsx file wraps all child pages. This is perfect for shared UI like navbars and footers — and it persists across navigations without re-rendering.\n\nServer Components: By default, all components in the App Router are Server Components. This means they run on the server, can fetch data directly, and send only HTML to the browser — making them fast and SEO-friendly.\n\nClient Components: When you need interactivity (useState, useEffect, event handlers), add \"use client\" at the top of your file to opt into client-side rendering.\n\nData Fetching: You can fetch data directly inside async Server Components using the native fetch API — no getServerSideProps or getStaticProps needed.\n\nThis new model takes some getting used to, but once it clicks, it makes building full-stack React apps dramatically simpler.",
+    "category": "Next.js",
+    "author": "Anika Reeves",
+    "date": "2024-03-22",
+    "read_time": "8 min read",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800",
+    "tags": ["Next.js", "React", "App Router"]
+  },
+  {
+    "id": 3,
+    "title": "Why Tailwind CSS Is Taking Over the Web",
+    "short_description": "Explore why thousands of developers are ditching traditional CSS for Tailwind utility classes.",
+    "full_description": "Tailwind CSS has gone from controversial experiment to industry standard in just a few years. But why? What makes developers love it so much — and is it actually better?\n\nThe core idea of Tailwind is utility-first CSS. Instead of writing custom class names and jumping between HTML and CSS files, you apply small, single-purpose classes directly in your markup.\n\nNo more naming things: One of the biggest time-sinks in CSS is coming up with class names like .card-header-inner-wrapper. Tailwind eliminates this entirely.\n\nNo dead CSS: Traditional CSS files grow over time and accumulate unused styles. With Tailwind, if you don't use a class, it's purged in production.\n\nDesign constraints: Tailwind's spacing, color, and typography scales create natural design consistency across your project without a design system.\n\nResponsive design: Breakpoint prefixes like sm:, md:, and lg: make responsive design feel intuitive and co-located with your markup.\n\nThere are valid criticisms too — HTML can look cluttered, and working with Tailwind in large teams requires discipline. But for most projects, the speed and consistency benefits far outweigh the downsides.\n\nTailwind isn't going anywhere. If you haven't tried it yet, now is the time.",
+    "category": "CSS",
+    "author": "Priya Nair",
+    "date": "2024-02-14",
+    "read_time": "5 min read",
+    "image": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=800",
+    "tags": ["Tailwind CSS", "CSS", "Frontend"]
+  },
+  {
+    "id": 4,
+    "title": "Understanding REST APIs with Node.js and Express",
+    "short_description": "Build your first REST API from scratch using Node.js, Express, and best practices.",
+    "full_description": "REST APIs are the backbone of modern web applications. Whether you're building a mobile app, a single-page app, or a microservice, you'll almost certainly need a REST API.\n\nIn this post we'll cover the fundamentals of building a REST API with Node.js and Express.\n\nWhat is REST? REST stands for Representational State Transfer. It's an architectural style that uses standard HTTP methods — GET, POST, PUT, DELETE — to perform operations on resources.\n\nSetting up Express is straightforward. Install it with npm install express, create an app.js file, and define your routes.\n\nRoutes and Controllers: Keep your routes thin. Move business logic into controller functions to keep things organized and testable.\n\nMiddleware: Express middleware functions run between the request and response. Use them for logging, authentication, validation, and error handling.\n\nHTTP Status Codes: Always return appropriate status codes. 200 for success, 201 for created, 400 for bad request, 401 for unauthorized, 404 for not found, 500 for server errors.\n\nError Handling: Create a centralized error handling middleware at the bottom of your middleware stack to catch and format all errors consistently.\n\nWith these fundamentals in place, you'll be able to build clean, maintainable REST APIs that follow industry best practices.",
+    "category": "Backend",
+    "author": "Marcus Chen",
+    "date": "2024-01-30",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+    "tags": ["Node.js", "Express", "REST API"]
+  },
+  {
+    "id": 5,
+    "title": "HTML & CSS Best Practices in 2024",
+    "short_description": "Write cleaner, more accessible, and maintainable HTML and CSS with these modern best practices.",
+    "full_description": "HTML and CSS are the foundation of every website. Yet many developers — even experienced ones — still write HTML and CSS the way they learned it years ago.\n\nHere are the most important best practices for writing modern HTML and CSS in 2024.\n\nSemantic HTML: Use the right element for the right purpose. Use header, nav, main, section, article, aside, and footer instead of divs for everything. Semantic HTML improves accessibility, SEO, and readability.\n\nAccessibility first: Add alt text to all images. Use proper heading hierarchy (h1 → h2 → h3). Ensure sufficient color contrast. Make interactive elements keyboard-navigable.\n\nCSS Custom Properties: Use CSS variables (--color-primary: #f97316) for colors, spacing, and fonts. This makes theming and maintenance dramatically easier.\n\nCSS Grid and Flexbox: Stop using floats and position hacks for layout. CSS Grid and Flexbox handle 99% of layout needs cleanly and responsively.\n\nMobile-first design: Write your base styles for mobile, then add breakpoints with min-width to scale up. This results in cleaner, lighter CSS.\n\nAvoid over-specificity: Keep selectors simple. Deep nesting and ID selectors create specificity wars that are hard to debug.\n\nThese practices won't just make your code look better — they'll make your sites faster, more accessible, and easier to maintain.",
+    "category": "Frontend",
+    "author": "Sarah Mitchell",
+    "date": "2024-01-05",
+    "read_time": "6 min read",
+    "image": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=800",
+    "tags": ["HTML", "CSS", "Best Practices"]
+  },
+  {
+    "id": 6,
+    "title": "Git Workflows Every Developer Must Know",
+    "short_description": "From basic commits to branching strategies — master the Git workflows used in real teams.",
+    "full_description": "Git is the most important tool in a developer's toolkit after their code editor. Yet many developers only know the basics — init, add, commit, push — and struggle when things go wrong.\n\nHere are the Git workflows every developer should master.\n\nFeature Branch Workflow: Never commit directly to main. Create a new branch for every feature or bug fix. When it's done, open a pull request to merge it back.\n\nCommit messages: Write clear, descriptive commit messages. Use the imperative mood: \"Add login form\" not \"Added login form\". A good commit message explains why, not just what.\n\nGit stash: Use git stash to temporarily save uncommitted changes when you need to switch branches quickly without making a commit.\n\nInteractive rebase: Use git rebase -i to clean up messy commit histories before merging. Squash small fixup commits into meaningful ones.\n\nResolving conflicts: Don't panic when you see a merge conflict. Open the file, understand both sides of the conflict, and manually decide what the final code should look like.\n\ngit log --oneline --graph: This command gives you a beautiful visual overview of your branch history. Alias it for daily use.\n\nMastering these workflows will make you a more confident, productive collaborator on any team.",
+    "category": "Tools",
+    "author": "Tom Eriksen",
+    "date": "2023-12-18",
+    "read_time": "5 min read",
+    "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800",
+    "tags": ["Git", "GitHub", "Workflow"]
+  }
+]

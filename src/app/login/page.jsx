@@ -24,6 +24,7 @@ const LoginPage = () => {
       email,
       password,
       redirect: false,
+      callbackUrl: "/", 
     });
 
 
@@ -32,7 +33,8 @@ const LoginPage = () => {
       Swal.fire("error", "Email, password doesnot match", "error");
     } else {
       Swal.fire("Success", "Welcome to Devel", "success");
-      router.push('/')
+      router.push('/');
+      router.refresh();
     }
   };
 

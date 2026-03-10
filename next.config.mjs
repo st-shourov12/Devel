@@ -1,5 +1,7 @@
-// next.config.mjs
 const nextConfig = {
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL, // ✅ expose to build
+  },
   images: {
     remotePatterns: [
       {

@@ -1,87 +1,60 @@
-
-
-
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { loginUser } from "@/actions/server/auth";
-
-export const authOptions = {
-  providers: [
-    // ✅ Google provider added
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-    CredentialsProvider({
-      name: "Credentials",
-      credentials: {},
-      async authorize(credentials) {
-        const user = await loginUser(credentials);
-        return user; // null = failed, object = success
-      },
-    }),
-  ],
-  pages: {
-    signIn: "/login",
-  },
-  secret: process.env.NEXTAUTH_SECRET,
-  callbacks: {
-    async redirect() {
-      return "/";
-    },
-  },
-};
-
-const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST };
-
-// src/app/api/auth/[...nextauth]/route.js
 // import NextAuth from "next-auth";
 // import GoogleProvider from "next-auth/providers/google";
 // import CredentialsProvider from "next-auth/providers/credentials";
 // import { loginUser } from "@/actions/server/auth";
 
-// export const authOptions = {
+// const authOptions = {
 //   providers: [
 //     GoogleProvider({
-//       clientId: process.env.GOOGLE_CLIENT_ID,
-//       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//       clientId: process.env.GOOGLE_CLIENT_ID || "",
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
 //     }),
 //     CredentialsProvider({
 //       name: "Credentials",
-//       credentials: {},
+//       credentials: {
+//         email: { label: "Email", type: "email" },
+//         password: { label: "Password", type: "password" },
+//       },
 //       async authorize(credentials) {
 //         const user = await loginUser(credentials);
+//         if (!user) return null;
 //         return user;
 //       },
 //     }),
 //   ],
-//   // ✅ Required for credentials provider
+
+
 //   session: {
 //     strategy: "jwt",
 //   },
+
 //   pages: {
 //     signIn: "/login",
 //   },
-//   secret: process.env.NEXTAUTH_SECRET,
+
+//   secret: process.env.NEXTAUTH_SECRET || "",
+
 //   callbacks: {
 //     async jwt({ token, user }) {
 //       if (user) {
 //         token.id = user.id;
 //         token.role = user.role;
+//         token.name = user.name;
+//         token.email = user.email;
 //       }
 //       return token;
 //     },
 //     async session({ session, token }) {
-//       if (token) {
+//       if (session?.user) {
 //         session.user.id = token.id;
 //         session.user.role = token.role;
+//         session.user.name = token.name;
+//         session.user.email = token.email;
 //       }
 //       return session;
 //     },
-//     async redirect() {
-//       return "/";
+//     async redirect({ url, baseUrl }) {
+//       return baseUrl;
 //     },
 //   },
 // };

@@ -1,4 +1,6 @@
-// app/about/page.jsx
+"use client"
+
+import Link from "next/link";
 
 const stats = [
   { value: "42k+", label: "Students Enrolled" },
@@ -199,12 +201,12 @@ const AboutPage = () => {
             Join thousands of developers already growing with Devel.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="/course" className="btn btn-orange-600 btn-lg">
+            <Link href="/course" className="btn btn-orange-600 btn-lg">
               Browse Courses
-            </a>
-            <a href="/register" className="btn btn-outline btn-lg">
+            </Link>
+            <Link href="/register" className="btn btn-outline btn-lg">
               Sign Up Free
-            </a>
+            </Link>
           </div>
         </div>
       </section>

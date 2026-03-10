@@ -6,7 +6,7 @@ A full-stack web development course selling platform built with **Next.js App Ro
 
 ## 🚀 Live Demo
 
-### [https://devel-iota.vercel.app](https://devel-iota.vercel.app)
+### [https://devel-seven.vercel.app](https://devel-seven.vercel.app)
 
 ---
 

@@ -1,4 +1,4 @@
-// src/app/register/page.jsx
+
 "use client";
 
 import { signIn } from "next-auth/react";
@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { postUser } from "@/actions/server/auth";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 
 const RegisterPage = () => {
@@ -37,8 +38,8 @@ const handleSubmit = async (e) => {
   }
 
   if (result?.acknowledged) {
-    alert("Registration successful!");
-    router.push('/login');
+    Swal.fire("Success", "Welcome to Devel", "success");
+    router.push('/');
   } else {
     alert("Something went wrong. Please try again.");
   }

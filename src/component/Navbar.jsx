@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import Logo from './Logo';
-import Navlink from './Navlink';
+// import Link from './Link';
 import AuthBtn from './Button/AuthBtn';
 
 
@@ -21,13 +21,13 @@ const Navbar = () => {
                             <Link href={'/'}>Home</Link>
                         </li>
                         <li>
-                            <Navlink href={'/course'}>Course</Navlink>
+                            <Link href={'/course'}>Course</Link>
                         </li>
                         <li>
-                            <Navlink href={'/about'}>About Us</Navlink>
+                            <Link href={'/about'}>About Us</Link>
                         </li>
                         <li>
-                            <Navlink href={'/blog'}>Blog</Navlink>
+                            <Link href={'/blog'}>Blog</Link>
                         </li>
                     </ul>
                 </div>
@@ -39,13 +39,13 @@ const Navbar = () => {
                         <Link href={'/'}>Home</Link>
                     </li>
                     <li>
-                        <Navlink href={'/course'}>Course</Navlink>
+                        <Link href={'/course'}>Course</Link>
                     </li>
                     <li>
-                        <Navlink href={'/about'}>About Us</Navlink>
+                        <Link href={'/about'}>About Us</Link>
                     </li>
                     <li>
-                        <Navlink href={'/blog'}>Blog</Navlink>
+                        <Link href={'/blog'}>Blog</Link>
                     </li>
                 </ul>
             </div>

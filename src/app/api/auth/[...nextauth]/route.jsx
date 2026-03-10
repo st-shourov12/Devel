@@ -6,8 +6,8 @@ import { loginUser } from "@/actions/server/auth";
 const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
     CredentialsProvider({
       name: "Credentials",
@@ -16,19 +16,24 @@ const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        try {
-          const user = await loginUser(credentials);
-          if (user) return user;
-          return null;
-        } catch (error) {
-          return null;
-        }
+        const user = await loginUser(credentials);
+        if (!user) return null;
+        return user;
       },
     }),
   ],
-  session: { strategy: "jwt" },
-  pages: { signIn: "/login" },
-  secret: process.env.NEXTAUTH_SECRET,
+
+
+  session: {
+    strategy: "jwt",
+  },
+
+  pages: {
+    signIn: "/login",
+  },
+
+  secret: process.env.NEXTAUTH_SECRET || "",
+
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
@@ -40,11 +45,16 @@ const authOptions = {
       return token;
     },
     async session({ session, token }) {
-      session.user.id = token.id;
-      session.user.role = token.role;
-      session.user.name = token.name;
-      session.user.email = token.email;
+      if (session?.user) {
+        session.user.id = token.id;
+        session.user.role = token.role;
+        session.user.name = token.name;
+        session.user.email = token.email;
+      }
       return session;
+    },
+    async redirect({ url, baseUrl }) {
+      return baseUrl;
     },
   },
 };
